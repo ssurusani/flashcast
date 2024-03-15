@@ -1,0 +1,17 @@
+{
+      "videoId": "1",
+      "videoState": "Ignite summary",
+      "summaryReelsUrl":[{
+        "downloadUrls":"https://videosforfhl.blob.core.windows.net/reels/1.%20(Start%3A0%3A00%3A23.96%20End%3A%200%3A00%3A41.62)%20Chris%20is%20confirmed%20to%20be%20the%20secondary%20person%20for%20the%20meeting%2C%20while%20another%20person%20couldn't%20join%20and%20asked%20to%20proceed%20without%20her?sp=r&st=2024-03-14T21:29:01Z&se=2024-03-15T05:29:01Z&spr=https&sv=2022-11-02&sr=b&sig=x8fjYSTdT%2BPwVXwsVfkYi831%2BhPdmoCy7DHP4TPzi5U%3D",
+        "reelTitle":"Title1"
+      },{
+        "downloadUrls":"https://videosforfhl.blob.core.windows.net/reels/f7b34f38-05f7-41b8-8d2c-af7f0c91d2c2_combined_%5B12%2C%2013%2C%2035%2C%2036%2C%20157%5D.mp4?sp=r&st=2024-03-14T21:29:34Z&se=2024-03-15T05:29:34Z&spr=https&sv=2022-11-02&sr=b&sig=S2nQIgIufjWP4SDG8YCZXkqYeKDM8m8WgIpSj0uJX1Q%3D",
+        "reelTitle":"Title2"
+      }],
+      "combinedReelUrl":{
+        "downloadUrls":"https://videosforfhl.blob.core.windows.net/reels/f7b34f38-05f7-41b8-8d2c-af7f0c91d2c2_combined_%5B12%2C%2013%2C%2035%2C%2036%2C%20157%5D.mp4?sp=r&st=2024-03-14T21:29:34Z&se=2024-03-15T05:29:34Z&spr=https&sv=2022-11-02&sr=b&sig=S2nQIgIufjWP4SDG8YCZXkqYeKDM8m8WgIpSj0uJX1Q%3D",
+        "reelTitle":"Title2"
+      }
+}
+
+  

@@ -1,0 +1,12 @@
+/* styles.css */
+.video-wrapper {
+    display: flex;
+    overflow-x: auto; 
+    gap: 16px; 
+}
+  
+  .video-wrapper .video-react {
+    width: 320px; 
+    height: 180px;
+}
+  
