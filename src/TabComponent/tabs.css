@@ -29,14 +29,17 @@
 }
 
 .tab.active {
+  padding: 8px;
   border-bottom: 4px solid #5e66f9;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
 .tab-content {
-  position: relative;
   padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .tab-text{
