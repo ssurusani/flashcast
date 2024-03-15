@@ -1,4 +1,11 @@
 .tab-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
 }
 
 .tabs {

@@ -14,10 +14,10 @@ const TabComponent: React.FC = () => {
 
   const tabContent: JSX.Element[] = [
     <div key={0}><ShortsList/></div>,
-    //<div key={1}><UploadVideo/></div>
+    <div key={1}><UploadVideo/></div>
   ];
 
-  const tabName: string[] = [" Shorts"];
+  const tabName: string[] = [" Shorts", "Upload"];
 
   return (
     <div className="tab-container">
