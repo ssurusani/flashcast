@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 
-import './upload-video-tab.css'
+import './upload-video-tab.css';
+import { Spinner } from './spinner.tsx';
 
 interface VideoUploadProps {
   siteUrl: string; // SharePoint site URL
@@ -10,10 +11,14 @@ interface VideoUploadProps {
 
 const UploadVideo: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedFileName, setSelectedFileName] = useState("");
+  const [uploadingFile, setUploadingFile] = useState(false);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
+    console.log(`file name ${file?.name}`);
     if (file) {
+      setSelectedFileName(file.name);
       setSelectedFile(file);
     }
   };
@@ -24,19 +29,22 @@ const UploadVideo: React.FC = () => {
       return;
     }
 
+    setUploadingFile(true);
+
     try {
-      const uploadUrl = `$/_api/web/lists/getbytitle('Videos')/RootFolder/Files/Add(url='${selectedFile.name}', overwrite=true)`;// api
+      const uploadUrl = `https://flashcastsfhlcontainers.azurewebsites.net/api/Videos/upload`;// api
+      const formData = new FormData();
+      formData.append('file', selectedFile);
 
       // Upload the file using fetch or any other HTTP library
       const response = await fetch(uploadUrl, {
         method: 'POST',
-        body: selectedFile,
-        headers: {
-          'Accept': 'application/json',
-          'X-RequestDigest': 'your-request-digest', // Obtain this from SharePoint
-        },
+        body: formData,
       });
 
+      setUploadingFile(false);
+      setSelectedFile(null);
+      setSelectedFileName("");
       if (response.ok) {
         console.log('Video uploaded successfully!');
         // Handle success (e.g., show a success message)
@@ -52,8 +60,13 @@ const UploadVideo: React.FC = () => {
 
   return (
     <div>
-      <input type="file" accept="video/*" onChange={handleFileChange} />
+      <label className="choose-file-button-container" htmlFor="file-upload">
+        <input id="file-upload" className='choose-file-button' type="file" accept="video/*" onChange={handleFileChange} />
+        Choose an mp4
+      </label>
       <button className='upload-video-button' onClick={handleUpload}>Upload Video</button>
+      <div>Selected file: {selectedFileName}</div>
+      {uploadingFile && <Spinner/>}
     </div>
   );
 };

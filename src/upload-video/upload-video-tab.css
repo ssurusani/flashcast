@@ -1,4 +1,60 @@
 .upload-video-button{
-    background-color: #5e66f9;
-    border: none;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 96px;
+    color: black;
+    font-size: small;
+    border-color: #8F93FF;
+    margin-left: 5px;
+    margin-right: 5px;
 }
+
+#file-upload{
+    border: 1px solid;
+    border-radius: 3px;
+    width: 96px;
+    height: 32px;
+}
+
+.choose-file-button{
+    background-color: #ffffff;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 96px;
+    height: 32px;
+    display: none;
+}
+
+.choose-file-button-container{
+    background-color: #ffffff;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 96px;
+    height: 32px;
+    color: black;
+    font-size: small;
+    border-color: #8F93FF;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.loader-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    border: 3px solid #f3f3f3; /* Light grey */
+    border-top: 3px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 0.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
