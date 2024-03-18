@@ -1,3 +1,9 @@
 .react-player{
     background-color: #d9dbf2;
 }
+
+/* @media (max-width: 80px) {
+    .flex-container {
+        flex-direction: column;
+    }
+} */

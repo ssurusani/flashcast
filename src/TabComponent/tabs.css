@@ -3,8 +3,7 @@
   flex-direction: column;
 }
 
-#menu {
-    display: flex;
+.app-bar {
     flex-direction: row;
     justify-content: center;
 }
@@ -14,7 +13,7 @@
   flex: auto;
   position: relative;
   flex-direction: row;
-  background-color: #f0f0f0;
+  background-color: #d9dbf2;
   padding: 10px;
 }
 
@@ -30,18 +29,18 @@
 
 .tab.active {
   padding: 8px;
-  border-bottom: 4px solid #5e66f9;
-  margin-bottom: 20px;
+  border-bottom: 4px solid black;
   font-weight: bold;
 }
 
 .tab-content {
-  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 39.33px; 
 }
 
 .tab-text{
  padding-left:'0.3em';
+ color: #d9dbf2;
 }

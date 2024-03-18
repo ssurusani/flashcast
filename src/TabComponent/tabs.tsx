@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { ShortsList } from '../meeting-shorts/fetch-meeting-shorts.tsx';
 import { UploadVideo } from '../upload-video/upload-video-tab.tsx';
-import { Video16Regular, Video16Filled } from '@fluentui/react-icons'
+import { Video16Regular, Video16Filled } from '@fluentui/react-icons';
+import { AppBar } from '@material-ui/core';
 import "./tabs.css"
 
 const TabComponent: React.FC = () => {
@@ -21,11 +22,10 @@ const TabComponent: React.FC = () => {
 
   return (
     <div className="tab-container">
-      <div id="menu">
+      <AppBar style={{'flexDirection':'row','alignItems':'center','backgroundColor':'#d9dbf2'}}>
         {tabContent.map((content, index) => (
           <button
             key={index}
-            style = {{'display': 'flex'}}
             className={`tab ${activeTab === index ? 'active' : ''}`}
             onClick={() => handleTabClick(index)}
           >
@@ -33,7 +33,7 @@ const TabComponent: React.FC = () => {
             <text className="tabtext" style = {{'padding':'0.3em'}}>{tabName[index]}</text>
           </button>
         ))}
-      </div>
+      </AppBar>
       <div className="tab-content">{tabContent[activeTab]}</div>
     </div>
   );

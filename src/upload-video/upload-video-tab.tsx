@@ -1,9 +1,10 @@
 // VideoUploadComponent.tsx
 
 import React, { useState } from 'react';
+import { Spinner } from './spinner.tsx';
 
 import './upload-video-tab.css';
-import { Spinner } from './spinner.tsx';
+
 
 interface VideoUploadProps {
   siteUrl: string; // SharePoint site URL
@@ -59,12 +60,12 @@ const UploadVideo: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='div-upload'>
       <label className="choose-file-button-container" htmlFor="file-upload">
         <input id="file-upload" className='choose-file-button' type="file" accept="video/*" onChange={handleFileChange} />
         Choose an mp4
       </label>
-      <button className='upload-video-button' onClick={handleUpload}>Upload Video</button>
+      <button className='upload-video-button' onClick={handleUpload}>Upload</button>
       <div>Selected file: {selectedFileName}</div>
       {uploadingFile && <Spinner/>}
     </div>
